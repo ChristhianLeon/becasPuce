@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Becas Estudiantiles | PUCE Quito</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER INSTITUCIONAL (FLEXBOX) -->
+  <header class="main-header">
+    <div class="brand-container">
+      <div class="logo-box" aria-label="Logo PUCE">PUCE</div>
+      <div class="brand-titles">
+        <h1>Pontificia Universidad Católica del Ecuador</h1>
+        <p>Dirección de Bienestar Estudiantil — Sede Quito</p>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#oferta">Becas Disponibles</a></li>
+        <li><a href="#requisitos">Requisitos</a></li>
+        <li><a href="#postular" class="btn-nav">Postular Ahora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-content">
+        <span class="badge-hero">Convocatoria Período Académico 2026-2027</span>
+        <h2>Impulsamos tu talento para ser más y servir mejor</h2>
+        <p>La situación económica no debe ser un obstáculo para tu formación universitaria. Explora nuestro sistema de becas e inicia tu solicitud en línea.</p>
+        <a href="#postular" class="btn-primary">Iniciar Solicitud de Beca</a>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DE BECAS INSTITUCIONALES (CSS GRID) -->
+    <section id="oferta" class="section-container">
+      <h2 class="section-title">Programas de Becas Universitarias</h2>
+      <p class="section-subtitle">Conoce las modalidades de apoyo financiero vigentes en la Sede Matriz Quito</p>
+      
+      <div class="grid-becas">
+        <article class="card-beca">
+          <header class="card-header">
+            <span class="card-tag">Mérito & Vulnerabilidad</span>
+            <h3>Beca Aurelio Espinosa Pólit</h3>
+          </header>
+          <div class="card-body">
+            <p class="coverage-highlight">Cobertura: Hasta el 100% de aranceles</p>
+            <p>Dirigida a bachilleres y estudiantes de excelencia académica pertenecientes a hogares de escasos recursos económicos.</p>
+          </div>
+        </article>
+
+        <article class="card-beca">
+          <header class="card-header">
+            <span class="card-tag">Rendimiento Académico</span>
+            <h3>Beca de Excelencia Académica</h3>
+          </header>
+          <div class="card-body">
+            <p class="coverage-highlight">Cobertura: 50% en aranceles</p>
+            <p>Destinada a estudiantes regulares de la PUCE que obtienen el promedio académico más alto de su respectiva carrera.</p>
+          </div>
+        </article>
+
+        <article class="card-beca">
+          <header class="card-header">
+            <span class="card-tag">Apoyo Socioeconómico</span>
+            <h3>Beca Solidaridad Grado</h3>
+          </header>
+          <div class="card-body">
+            <p class="coverage-highlight">Cobertura: Variable según evaluación</p>
+            <p>Asistencia financiera ante emergencias como desempleo del representante, gastos por enfermedades catastróficas o fallecimiento del sustento de hogar.</p>
+          </div>
+        </article>
+
+        <article class="card-beca">
+          <header class="card-header">
+            <span class="card-tag">Cultura & Deporte</span>
+            <h3>Beca Cultural y Deportiva</h3>
+          </header>
+          <div class="card-body">
+            <p class="coverage-highlight">Cobertura: 20% de descuento</p>
+            <p>Reconocimiento para estudiantes que integran activamente las selecciones deportivas oficiales o grupos culturales de la universidad.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- INFORMACIÓN DE REQUISITOS GENERALES -->
+    <section id="requisitos" class="section-container info-box-container">
+      <h2>Requisitos Generales de Postulación</h2>
+      <ul class="list-requisitos">
+        <li>Estar admitido en la PUCE o ser estudiante regular matriculado.</li>
+        <li>Presentar la Ficha de Postulación socioeconómica con firmas de respaldo.</li>
+        <li>Adjuntar copias de cédulas del núcleo familiar y planillas de servicios básicos.</li>
+        <li>Acreditar respaldos de ingresos familiares o justificativos médicos/laborales según el tipo de beca.</li>
+      </ul>
+    </section>
+
+    <!-- FORMULARIO DE POSTULACIÓN (REGLA: 100% ESTÁTICO SIN JS) -->
+    <section id="postular" class="section-container form-wrapper">
+      <h2 class="section-title">Formulario de Solicitud de Beca</h2>
+      <p class="form-instruction">Campos marcados con asterisco (*) son de carácter obligatorio.</p>
+
+      <form action="#" method="post" class="beca-form">
+        <!-- BLOQUE 1: DATOS PERSONALES -->
+        <fieldset>
+          <legend>1. Datos de Identificación del Estudiante</legend>
+          
+          <div class="form-group">
+            <label for="nombres">Nombres y Apellidos Completos *</label>
+            <input type="text" id="nombres" name="nombres" placeholder="Ej. Carlos Andrés Mendoza López" required aria-required="true">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cedula">Cédula de Identidad / Pasaporte *</label>
+              <input type="text" id="cedula" name="cedula" pattern="[7-10, 12-16]{10}" placeholder="10 dígitos numéricos" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo Institucional PUCE *</label>
+              <input type="email" id="correo" name="correo" placeholder="usuario@puce.edu.ec" required aria-required="true">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- BLOQUE 2: DETALLES DE ACADÉMICOS Y BECA -->
+        <fieldset>
+          <legend>2. Solicitud Académica</legend>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="carrera">Carrera / Programa *</label>
+              <select id="carrera" name="carrera" required aria-required="true">
+                <option value="">-- Selecciona tu carrera --</option>
+                <option value="software">TGU Desarrollo de Software</option>
+                <option value="sistemas">Ingeniería en Sistemas de Información</option>
+                <option value="diseno">Diseño Gráfico / UX UI</option>
+                <option value="administracion">Administración de Empresas</option>
+                <option value="medicina">Medicina</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="modalidad-beca">Tipo de Beca a Solicitar *</label>
+              <select id="modalidad-beca" name="modalidad_beca" required aria-required="true">
+                <option value="">-- Selecciona el programa --</option>
+                <option value="polit">Beca Aurelio Espinosa Pólit</option>
+                <option value="excelencia">Beca de Excelencia Académica</option>
+                <option value="solidaridad">Beca Solidaridad Grado</option>
+                <option value="cultural-deportiva">Beca Cultural / Deportiva</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="justificacion">Exposición de Motivos y Justificación *</label>
+            <textarea id="justificacion" name="justificacion" rows="4" placeholder="Describe brevemente tu situación académica o socioeconómica..." required aria-required="true"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="archivo">Adjuntar Expediente Socioeconómico / Récord Académico (PDF) *</label>
+            <input type="file" id="archivo" name="archivo" accept=".pdf" required aria-required="true">
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-submit">Enviar Registro de Postulación</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>PUCE Quito — Matriz</h3>
+        <p>Av. 12 de Octubre 1076 y Vicente Ramón Roca</p>
+        <p>Teléfono: (02) 299 1700 Ext. 1162 / 1174</p>
+        <p>Correo: becasquito@puce.edu.ec</p>
+      </div>
+      <div class="footer-col">
+        <h3>Desarrollo Web Front End UX/UI</h3>
+        <p>Taller Práctico Tarea 2 — Grupo 4</p>
+        <p>&copy; 2026 Pontificia Universidad Católica del Ecuador</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

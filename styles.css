@@ -1,0 +1,373 @@
+/* ==========================================================================
+   PALETA CROMÁTICA OFICIAL PUCE QUITO & REGLAS GENERALES
+   ========================================================================== */
+:root {
+  --puce-blue: #002A54;          /* Azul Institucional Principal */
+  --puce-blue-dark: #001A36;     /* Azul Oscuro para Hovers */
+  --puce-gold: #D4AF37;          /* Dorado de Acento PUCE */
+  --puce-bg-light: #F4F7F9;      /* Fondo Gris Claro UX */
+  --puce-text: #2C3E50;          /* Color de Texto Principal */
+  --puce-card-bg: #FFFFFF;      /* Fondo de Tarjetas */
+  --border-radius: 6px;
+  --transition-speed: 0.3s ease;
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--puce-bg-light);
+  color: var(--puce-text);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   HEADER Y NAVEGACIÓN (FLEXBOX)
+   ========================================================================== */
+.main-header {
+  background-color: var(--puce-blue);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-box {
+  background-color: var(--puce-gold);
+  color: var(--puce-blue);
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  letter-spacing: 1px;
+}
+
+.brand-titles h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.brand-titles p {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--transition-speed);
+}
+
+.main-nav a:hover {
+  color: var(--puce-gold);
+}
+
+.btn-nav {
+  background-color: var(--puce-gold);
+  color: var(--puce-blue) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--border-radius);
+  font-weight: 700 !important;
+}
+
+.btn-nav:hover {
+  background-color: #c29f2e;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(rgba(0, 42, 84, 0.9), rgba(0, 42, 84, 0.9)),
+              url('[suspicious link removed]') center/cover;
+  color: white;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.badge-hero {
+  display: inline-block;
+  background-color: var(--puce-gold);
+  color: var(--puce-blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-content h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--puce-gold);
+  color: var(--puce-blue);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.btn-primary:hover {
+  background-color: #e5be3b;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SECCIÓN DE BECAS (CSS GRID)
+   ========================================================================== */
+.section-container {
+  max-width: 1140px;
+  margin: 3.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--puce-blue);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.grid-becas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.card-beca {
+  background-color: var(--puce-card-bg);
+  border-radius: var(--border-radius);
+  border-top: 5px solid var(--puce-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+.card-beca h3 {
+  color: var(--puce-blue);
+  margin: 0.4rem 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.coverage-highlight {
+  font-weight: 700;
+  color: #27AE60;
+  margin-bottom: 0.8rem;
+}
+
+/* REQUISITOS */
+.info-box-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border-left: 6px solid var(--puce-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-box-container h2 {
+  color: var(--puce-blue);
+  margin-bottom: 1rem;
+}
+
+.list-requisitos {
+  margin-left: 1.2rem;
+}
+
+.list-requisitos li {
+  margin-bottom: 0.6rem;
+}
+
+/* ==========================================================================
+   FORMULARIO DE SOLICITUD & ACCESIBILIDAD CSS
+   ========================================================================== */
+.form-wrapper {
+  background-color: var(--puce-card-bg);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.form-instruction {
+  font-size: 0.9rem;
+  color: #d9534f;
+  margin-bottom: 1.5rem;
+}
+
+fieldset {
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+legend {
+  font-weight: 700;
+  color: var(--puce-blue);
+  padding: 0 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+input, select, textarea {
+  padding: 0.75rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+/* Pseudo-clases CSS para accesibilidad sin JS */
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--puce-blue);
+  border-color: var(--puce-blue);
+}
+
+input:invalid:not(:placeholder-shown), select:invalid:not(:placeholder-shown) {
+  border-color: #d9534f;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--puce-blue);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.btn-submit:hover {
+  background-color: var(--puce-blue-dark);
+}
+
+/* ==========================================================================
+   FOOTER INSTITUCIONAL
+   ========================================================================== */
+.main-footer {
+  background-color: var(--puce-blue);
+  color: white;
+  padding: 2.5rem 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-col h3 {
+  color: var(--puce-gold);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main-nav ul {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+}
